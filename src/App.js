@@ -3,8 +3,7 @@ import Forms from './forms';
 
 function App() {
   return (
-    <div className="App">
-      <p>Alperen</p>
+    <div>
       <Forms></Forms>
     </div>
   );
