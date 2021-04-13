@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Forms extends Component {
+    handleSubmit=e=>{
+        e.preventDefault();
+        console.log('submit clicked')
+    }
     render() { 
         return ( 
         <div className="form">
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
                     <input id="username" type="text" className="form-control"/>
