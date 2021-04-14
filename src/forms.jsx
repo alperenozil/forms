@@ -22,7 +22,7 @@ class Forms extends Component {
                     <input id="password" type="text" className="form-control"/>
                 </div>
                 <button className="btn btn-primary">Login</button>
-                {this.username && <div className="alert alert-danger">Username is required</div>}
+                {this.username && <div className="alert alert-danger m-2">Username is required</div>}
             </form>
         </div> 
         );
