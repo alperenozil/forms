@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Forms extends Component {
+    username=React.createRef();
     handleSubmit=e=>{
         e.preventDefault();
+        const username=this.username.current.value;
         console.log('submit clicked')
+        console.log(`username is ${username}`);
     }
     render() { 
         return ( 
@@ -12,7 +15,7 @@ class Forms extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <input id="username" type="text" className="form-control"/>
+                    <input ref={this.username} id="username" type="text" className="form-control"/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
